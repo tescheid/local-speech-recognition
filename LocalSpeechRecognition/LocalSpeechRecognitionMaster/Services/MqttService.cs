@@ -27,15 +27,17 @@ namespace LocalSpeechRecognitionMaster
 
         public void Connect()
         {
-            client = new MqttClient("192.168.1.110");
+             //client = new MqttClient("eee-02013.simple.eee.intern");
+             client = new MqttClient("192.168.1.110");
             /* register to message received */
             client.MqttMsgPublishReceived += client_MqttMsgPublishReceived;
             //authenticated connection
             string clientId = Guid.NewGuid().ToString();
             try
             {
+               // password = GetPassword();
                 client.Connect(clientId, username, password);
-                Console.WriteLine("connected");
+                Console.WriteLine("MQTT connected");
             }
             catch (Exception e)
             {
@@ -46,17 +48,37 @@ namespace LocalSpeechRecognitionMaster
             client.Subscribe(new string[] { topic }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
         }
 
+        private static string GetPassword()
+        {
+            try
+            {
+                string pw= System.Environment.GetEnvironmentVariable("MQTT_PW");
+                if (pw!=null)
+                {
+                    return pw;
+                }
+                else
+                {
+                    return "";
+                }
+           }
+            catch(Exception e)
+            {
+                Console.WriteLine( e);
+            }
+            return "";
+        }
+
         public void PublishMessage(string msg)
         {
                 //string msg = "This is a message from Client"; //Console.ReadLine();
                 client.Publish(topic, Encoding.UTF8.GetBytes(msg)); //Topic=Aprog
         }
 
-         void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
+        /* handle message received */
+        void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
         {
-            /* handle message received */
             string msg = Encoding.UTF8.GetString(e.Message);
-            Console.Write("Client received message: "+ msg+"\n");
             messageReceivedEvent?.Invoke(this,e);
         }
 

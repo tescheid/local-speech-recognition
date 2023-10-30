@@ -11,4 +11,14 @@
     <PackageReference Include="M2Mqtt" Version="4.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Python\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Python\test.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

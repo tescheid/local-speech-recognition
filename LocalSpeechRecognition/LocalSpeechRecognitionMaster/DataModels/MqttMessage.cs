@@ -2,7 +2,7 @@
 {
     public class MqttMessage
     {
-       public string BlindsAction { get; set; } = "";
-        public string Sender { get; set; } = "";
+        public string Device { get; set; } = "";
+        public string Action { get; set; } = "";
     }
 }

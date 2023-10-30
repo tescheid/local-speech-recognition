@@ -15,3 +15,4 @@ C:\Users\domin\Documents\Dev\PAIND\local-speech-recognition\LocalSpeechRecogniti
 C:\Users\domin\Documents\Dev\PAIND\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\obj\Debug\net6.0\LocalSpeechRecognitionMaster.pdb
 C:\Users\domin\Documents\Dev\PAIND\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\obj\Debug\net6.0\LocalSpeechRecognitionMaster.genruntimeconfig.cache
 C:\Users\domin\Documents\Dev\PAIND\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\obj\Debug\net6.0\ref\LocalSpeechRecognitionMaster.dll
+C:\Users\domin\Documents\Dev\PAIND\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\Python\test.py

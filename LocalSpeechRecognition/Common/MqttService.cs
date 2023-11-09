@@ -7,7 +7,7 @@ using uPLibrary.Networking.M2Mqtt.Messages;
 using uPLibrary.Networking.M2Mqtt;
 
 
-namespace LocalSpeechRecognitionMaster
+namespace Common
 {
     public class MqttService
     {
@@ -17,35 +17,40 @@ namespace LocalSpeechRecognitionMaster
         private string password = "rp2040";
         private string topic = "";
 
-        public event EventHandler<MqttMsgPublishEventArgs> messageReceivedEvent; //durch das <MyEventArgs> kann man sich das delegate spahren.
+        public event EventHandler<MqttMsgPublishEventArgs> messageReceivedEvent;
 
-        public MqttService(string topic)
+        public MqttService(string topic, string username,string password)
         {
+            this.password= password;    
+            this.username = username;
             this.topic = topic;
             Connect();
         }
 
         public void Connect()
         {
-             //client = new MqttClient("eee-02013.simple.eee.intern");
-             client = new MqttClient("192.168.1.110");
-            /* register to message received */
-            client.MqttMsgPublishReceived += client_MqttMsgPublishReceived;
-            //authenticated connection
-            string clientId = Guid.NewGuid().ToString();
+           
+           
             try
             {
-               // password = GetPassword();
+                client = new MqttClient("eee-02013.simple.eee.intern");
+                //client = new MqttClient("192.168.1.110");
+                /* register to message received */
+                client.MqttMsgPublishReceived += client_MqttMsgPublishReceived;
+                //authenticated connection
+                string clientId = Guid.NewGuid().ToString();
+                // password = GetPassword();
                 client.Connect(clientId, username, password);
                 Console.WriteLine("MQTT connected");
+                //EMPFANGEN
+                /* subscribe to a topic */
+                client.Subscribe(new string[] { topic }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
             }
             catch (Exception e)
             {
                 Console.WriteLine("MQTT Connection error\n", e);
             }
-            //EMPFANGEN
-            /* subscribe to a topic */
-            client.Subscribe(new string[] { topic }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
+          
         }
 
         private static string GetPassword()

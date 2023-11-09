@@ -1,7 +1,7 @@
 from vosk import Model, KaldiRecognizer
 import pyaudio
 
-isGerman=False
+isGerman=True
 
 if isGerman:
     model=Model('vosk-model-small-de-0.15')

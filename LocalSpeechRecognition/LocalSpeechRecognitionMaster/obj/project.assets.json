@@ -14,6 +14,19 @@
             "related": ".pdb"
           }
         }
+      },
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "M2Mqtt": "4.3.0"
+        },
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
       }
     }
   },
@@ -55,10 +68,16 @@
         "m2mqtt.4.3.0.nupkg.sha512",
         "m2mqtt.nuspec"
       ]
+    },
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Common >= 1.0.0",
       "M2Mqtt >= 4.3.0"
     ]
   },
@@ -94,7 +113,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\domin\\Documents\\Dev\\PAIND\\local-speech-recognition\\LocalSpeechRecognition\\Common\\Common.csproj": {
+              "projectPath": "C:\\Users\\domin\\Documents\\Dev\\PAIND\\local-speech-recognition\\LocalSpeechRecognition\\Common\\Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

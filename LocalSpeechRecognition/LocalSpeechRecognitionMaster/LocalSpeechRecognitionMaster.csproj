@@ -16,6 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Python\test.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

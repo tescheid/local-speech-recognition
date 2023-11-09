@@ -1,4 +1,5 @@
-﻿using LocalSpeechRecognitionMaster;
+﻿using Common;
+using LocalSpeechRecognitionMaster;
 using LocalSpeechRecognitionMaster.DataModels;
 using LocalSpeechRecognitionMaster.Services;
 using System.Text;
@@ -21,12 +22,36 @@ namespace LocalSpeechRecognitionMaster
         private MqttMessage receivedActionRequest = new MqttMessage();
         private string answer = "";
 
+        private string mqttBrokerUsername="";
+        private string mqttBrokerPassword = "";
+
+
         public MasterService()
         {
-            mqttServiceRx = new MqttService("LocalSpeechRecognitionTx"); //receive from tx of gateway
+            requestMqttBrokerPassword();
+            Init();
+        }
+
+        private void requestMqttBrokerPassword()
+        {
+            //todo: uncomment
+            /*
+            Console.Write("Benutzername: ");
+            mqttBrokerUsername = Console.ReadLine();
+            Console.Write("Passwort: ");
+            mqttBrokerPassword = Console.ReadLine();
+            */
+            mqttBrokerUsername = "paindMQTTUser";
+            mqttBrokerPassword = "rp2040";
+    }
+
+
+        private void Init()
+        {
+            mqttServiceRx = new MqttService("LocalSpeechRecognitionTx",mqttBrokerUsername,mqttBrokerPassword); //receive from tx of gateway
             mqttServiceRx.messageReceivedEvent += BlindsActionRequested;
 
-            mqttServiceTx = new MqttService("LocalSpeechRecognitionRx"); //send to rx of gateway
+            mqttServiceTx = new MqttService("LocalSpeechRecognitionRx", mqttBrokerUsername, mqttBrokerPassword); //send to rx of gateway
 
 
             jsonService = new JsonService("./speechRecognitionOutput.json");

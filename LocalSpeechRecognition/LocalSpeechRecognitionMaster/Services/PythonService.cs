@@ -25,7 +25,7 @@ namespace LocalSpeechRecognitionMaster.Services
 
         private void ExecuteFile()
         {
-            Console.WriteLine("asdhflajskfh");
+            Console.WriteLine("Started Python script");
             ProcessStartInfo start = new ProcessStartInfo();
             start.FileName = pythonPath;
             start.Arguments = scriptPath;

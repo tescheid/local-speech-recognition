@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "UB5IZaXsNKdRm/hRM7n53t6pKztiItF+kL+DBE4Vci6CiOEITwSYkBvDy1MLagDzza3HM8d0uG4nHW4l1WRneQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\domin\\Documents\\Dev\\PAIND\\local-speech-recognition\\LocalSpeechRecognition\\Common\\Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\domin\\.nuget\\packages\\m2mqtt\\4.3.0\\m2mqtt.4.3.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'M2Mqtt 4.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "M2Mqtt",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}

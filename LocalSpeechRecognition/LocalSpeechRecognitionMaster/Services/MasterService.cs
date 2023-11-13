@@ -1,4 +1,5 @@
 ﻿using Common;
+using Common.DataModels;
 using LocalSpeechRecognitionMaster;
 using LocalSpeechRecognitionMaster.DataModels;
 using LocalSpeechRecognitionMaster.Services;
@@ -48,10 +49,10 @@ namespace LocalSpeechRecognitionMaster
 
         private void Init()
         {
-            mqttServiceRx = new MqttService("LocalSpeechRecognitionTx",mqttBrokerUsername,mqttBrokerPassword); //receive from tx of gateway
+            mqttServiceRx = new MqttService(MqttTopics.TopicTx,mqttBrokerUsername,mqttBrokerPassword); //receive from tx of gateway
             mqttServiceRx.messageReceivedEvent += BlindsActionRequested;
 
-            mqttServiceTx = new MqttService("LocalSpeechRecognitionRx", mqttBrokerUsername, mqttBrokerPassword); //send to rx of gateway
+            mqttServiceTx = new MqttService(MqttTopics.TopicRx, mqttBrokerUsername, mqttBrokerPassword); //send to rx of gateway
 
 
             jsonService = new JsonService("./speechRecognitionOutput.json");
@@ -89,6 +90,7 @@ namespace LocalSpeechRecognitionMaster
             try
             {
                 string receivedActionRequestJson = Encoding.UTF8.GetString(e.Message);
+                Console.WriteLine(receivedActionRequestJson);
                 receivedActionRequest = JsonSerializer.Deserialize<MqttMessage>(receivedActionRequestJson);
                 Console.WriteLine(receivedActionRequest.Device+ " action requested: " + receivedActionRequest.Action);
 
@@ -150,7 +152,7 @@ namespace LocalSpeechRecognitionMaster
         //Step 4. Execute action based on user response
         private void executeAction(string device, string action)
         {
-            string actionAsJson = "{\"Device\":" + device + "\",\"Action\":\"" + action + "\"}";
+            string actionAsJson = mqttServiceRx.GenerateActionMessage(device,action);
             Console.WriteLine("Execute Action: " + action);
             mqttServiceTx.PublishMessage(actionAsJson);
             answer = "";

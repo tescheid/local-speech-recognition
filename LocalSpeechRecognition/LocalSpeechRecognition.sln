@@ -9,8 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocalSpeechRecognitionMaste
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GatewaySimulation", "GatewaySimulation\GatewaySimulation.csproj", "{7B6A7052-38A1-4201-8118-177626D212B5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C5059236-EE7C-4208-ABC8-6ACAF4AC2A5B} = {C5059236-EE7C-4208-ABC8-6ACAF4AC2A5B}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{C5059236-EE7C-4208-ABC8-6ACAF4AC2A5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{C5059236-EE7C-4208-ABC8-6ACAF4AC2A5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

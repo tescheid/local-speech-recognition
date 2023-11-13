@@ -53,31 +53,18 @@ namespace Common
           
         }
 
-        private static string GetPassword()
+
+        public string GenerateActionMessage(string device, string action)
         {
-            try
-            {
-                string pw= System.Environment.GetEnvironmentVariable("MQTT_PW");
-                if (pw!=null)
-                {
-                    return pw;
-                }
-                else
-                {
-                    return "";
-                }
-           }
-            catch(Exception e)
-            {
-                Console.WriteLine( e);
-            }
-            return "";
+            return "{\"Device\":\"" + device + "\",\"Action\":\"" + action + "\"}";
         }
+
 
         public void PublishMessage(string msg)
         {
-                //string msg = "This is a message from Client"; //Console.ReadLine();
-                client.Publish(topic, Encoding.UTF8.GetBytes(msg)); //Topic=Aprog
+            Console.WriteLine(msg);
+            //string msg = "This is a message from Client"; //Console.ReadLine();
+            client.Publish(topic, Encoding.UTF8.GetBytes(msg)); //Topic=Aprog
         }
 
         /* handle message received */

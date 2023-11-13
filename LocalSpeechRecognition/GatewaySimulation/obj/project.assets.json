@@ -1,11 +1,121 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "M2Mqtt/4.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/M2Mqtt.Net.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net45/M2Mqtt.Net.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "System.Device.Gpio/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Device.Gpio.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Device.Gpio.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net5.0/System.Device.Gpio.targets": {}
+        }
+      },
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "M2Mqtt": "4.3.0"
+        },
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "M2Mqtt/4.3.0": {
+      "sha512": "2A1uM20uxuovQKPA0dkZUqD9gUpIMaX7KxdLiVM7IEXdPRL709hGuudHnvlDxm2/6b2LcOjshrYGVG9vdpipag==",
+      "type": "package",
+      "path": "m2mqtt/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net39-cf/DeployFileList.txt",
+        "lib/net39-cf/M2Mqtt.NetCf39.dll",
+        "lib/net39-cf/M2Mqtt.NetCf39.pdb",
+        "lib/net45/M2Mqtt.Net.dll",
+        "lib/net45/M2Mqtt.Net.pdb",
+        "lib/netmf42/M2Mqtt.NetMf.dll",
+        "lib/netmf42/M2Mqtt.NetMf.pdb",
+        "lib/netmf42/be/M2Mqtt.NetMf.pdb",
+        "lib/netmf42/be/M2Mqtt.NetMf.pdbx",
+        "lib/netmf42/be/M2Mqtt.NetMf.pe",
+        "lib/netmf42/le/M2Mqtt.NetMf.pdb",
+        "lib/netmf42/le/M2Mqtt.NetMf.pdbx",
+        "lib/netmf42/le/M2Mqtt.NetMf.pe",
+        "lib/netmf43/M2Mqtt.NetMf.dll",
+        "lib/netmf43/M2Mqtt.NetMf.pdb",
+        "lib/netmf43/be/M2Mqtt.NetMf.pdb",
+        "lib/netmf43/be/M2Mqtt.NetMf.pdbx",
+        "lib/netmf43/be/M2Mqtt.NetMf.pe",
+        "lib/netmf43/le/M2Mqtt.NetMf.pdb",
+        "lib/netmf43/le/M2Mqtt.NetMf.pdbx",
+        "lib/netmf43/le/M2Mqtt.NetMf.pe",
+        "lib/win81/M2Mqtt.WinRT.dll",
+        "lib/win81/M2Mqtt.WinRT.pdb",
+        "lib/win81/M2Mqtt.WinRT.pri",
+        "lib/wpa81/M2Mqtt.WinRT.dll",
+        "lib/wpa81/M2Mqtt.WinRT.pdb",
+        "lib/wpa81/M2Mqtt.WinRT.pri",
+        "m2mqtt.4.3.0.nupkg.sha512",
+        "m2mqtt.nuspec"
+      ]
+    },
+    "System.Device.Gpio/3.0.0": {
+      "sha512": "tU+rRrRlAiFj7PKcrr1hjw9QSxBZ2B0w8Pse05nUi0M85p8kSkAJdJExqjd06iW4K15dNjLkR/RO1NMalCRq+Q==",
+      "type": "package",
+      "path": "system.device.gpio/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net5.0/System.Device.Gpio.targets",
+        "lib/net6.0-windows10.0.17763/System.Device.Gpio.dll",
+        "lib/net6.0-windows10.0.17763/System.Device.Gpio.xml",
+        "lib/net6.0/System.Device.Gpio.dll",
+        "lib/net6.0/System.Device.Gpio.xml",
+        "lib/netstandard2.0/System.Device.Gpio.dll",
+        "lib/netstandard2.0/System.Device.Gpio.xml",
+        "system.device.gpio.3.0.0.nupkg.sha512",
+        "system.device.gpio.nuspec"
+      ]
+    },
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Common >= 1.0.0",
+      "System.Device.Gpio >= 3.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\domin\\.nuget\\packages\\": {},
@@ -39,7 +149,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\domin\\Documents\\Dev\\PAIND\\local-speech-recognition\\LocalSpeechRecognition\\Common\\Common.csproj": {
+              "projectPath": "C:\\Users\\domin\\Documents\\Dev\\PAIND\\local-speech-recognition\\LocalSpeechRecognition\\Common\\Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -51,6 +165,12 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "System.Device.Gpio": {
+            "target": "Package",
+            "version": "[3.0.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -70,5 +190,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'M2Mqtt 4.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "M2Mqtt",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

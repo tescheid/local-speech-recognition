@@ -21,3 +21,4 @@ C:\Users\domin\Documents\Dev\PAIND\local-speech-recognition\LocalSpeechRecogniti
 C:\Users\domin\Documents\Dev\PAIND\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\Common.exe
 C:\Users\domin\Documents\Dev\PAIND\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\Common.dll
 C:\Users\domin\Documents\Dev\PAIND\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\Common.pdb
+C:\Users\domin\Documents\Dev\PAIND\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\Python\speechRecognition.py

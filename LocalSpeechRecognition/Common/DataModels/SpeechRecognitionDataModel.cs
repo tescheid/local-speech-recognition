@@ -1,5 +1,5 @@
 ﻿
-namespace LocalSpeechRecognitionMaster
+namespace Common
 {
     public class SpeechRecognitionDataModel
     {

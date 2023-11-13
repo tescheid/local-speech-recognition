@@ -12,14 +12,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Python\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Python\speechRecognition.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Python\test.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

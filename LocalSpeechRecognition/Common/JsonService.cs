@@ -6,7 +6,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using static System.Collections.Specialized.BitVector32;
 
-namespace LocalSpeechRecognitionMaster
+namespace Common
 {
     public class JsonService
     {
@@ -21,15 +21,20 @@ namespace LocalSpeechRecognitionMaster
         public JsonService(string filePath)
         {
             this.filePath = filePath;
-            data = LoadJsonFile();
-            lastModified = File.GetLastWriteTime(filePath);
+            try
+            {
+                data = LoadJsonFile();
+                lastModified = File.GetLastWriteTime(filePath);
 
-            watcher = new FileSystemWatcher(Path.GetDirectoryName(filePath));
-            watcher.Filter = Path.GetFileName(filePath);
-            watcher.Changed += FileChanged;
-            watcher.EnableRaisingEvents = true;
-
-            //Timer checkTimer = new Timer(CheckFilePeriodically, null, 0, 5000); // Check every 5 seconds
+                watcher = new FileSystemWatcher(Path.GetDirectoryName(filePath));
+                watcher.Filter = Path.GetFileName(filePath);
+                watcher.Changed += FileChanged;
+                watcher.EnableRaisingEvents = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
      
 

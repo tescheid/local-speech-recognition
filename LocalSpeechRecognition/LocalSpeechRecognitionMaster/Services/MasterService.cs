@@ -1,8 +1,8 @@
 ﻿using Common;
 using Common.DataModels;
 using LocalSpeechRecognitionMaster;
-using LocalSpeechRecognitionMaster.DataModels;
 using LocalSpeechRecognitionMaster.Services;
+using System.Collections;
 using System.Text;
 using System.Text.Json;
 using uPLibrary.Networking.M2Mqtt.Messages;
@@ -20,13 +20,14 @@ namespace LocalSpeechRecognitionMaster
 
         private int maxWaitOnResponseIterations = 50;
 
-        private MqttMessage receivedActionRequest = new MqttMessage();
         private string answer = "";
 
-        private string mqttBrokerUsername="";
+        private string mqttBrokerUsername = "";
         private string mqttBrokerPassword = "";
 
-
+        Queue<MqttMessage> actionRequests = new Queue<MqttMessage>();
+        MqttMessage currentActionRequest;
+        bool lastRequestFinished = true;
         public MasterService()
         {
             requestMqttBrokerPassword();
@@ -44,13 +45,13 @@ namespace LocalSpeechRecognitionMaster
             */
             mqttBrokerUsername = "paindMQTTUser";
             mqttBrokerPassword = "rp2040";
-    }
+        }
 
 
         private void Init()
         {
-            mqttServiceRx = new MqttService(MqttTopics.TopicTx,mqttBrokerUsername,mqttBrokerPassword); //receive from tx of gateway
-            mqttServiceRx.messageReceivedEvent += BlindsActionRequested;
+            mqttServiceRx = new MqttService(MqttTopics.TopicTx, mqttBrokerUsername, mqttBrokerPassword); //receive from tx of gateway
+            mqttServiceRx.messageReceivedEvent += ActionRequested;
 
             mqttServiceTx = new MqttService(MqttTopics.TopicRx, mqttBrokerUsername, mqttBrokerPassword); //send to rx of gateway
 
@@ -61,46 +62,57 @@ namespace LocalSpeechRecognitionMaster
             soundService = new SoundService();
             soundService.audioPlayedEvent += ActionRequestSoundPlayed;
 
-            pythonService = new PythonService("Python/test.py");
-            pythonService.RunCmd();
+            pythonService = new PythonService("Python/speechRecognition.py");
 
-            //SimulateFileChanged(); //todo auskommentieren
             StartSpeechRecognition();
+
+            Thread t = new Thread(ProcessActionRequests);
+            t.IsBackground = true;
+            t.Start();
+
         }
 
         private void StartSpeechRecognition()
         {
-            //todo, start speech recognition
+            //pythonService.RunCmd();
         }
 
-        private void SimulateFileChanged()
-        {
-            while (true)
-            {
-                string content = "{\r\n\t\"text\": \"Yes\"\r\n}";
-                File.WriteAllText(jsonService.getFilePath(), content);
-                Thread.Sleep(1000);
-            }
 
-        }
-
-        //Step 1: Action requested from user or gateway systemfor Blinds 
-        private void BlindsActionRequested(object sender, MqttMsgPublishEventArgs e)
+        //Step 0: Action requested from user or gateway system  
+        private void ActionRequested(object sender, MqttMsgPublishEventArgs e)
         {
             try
             {
                 string receivedActionRequestJson = Encoding.UTF8.GetString(e.Message);
-                Console.WriteLine(receivedActionRequestJson);
-                receivedActionRequest = JsonSerializer.Deserialize<MqttMessage>(receivedActionRequestJson);
-                Console.WriteLine(receivedActionRequest.Device+ " action requested: " + receivedActionRequest.Action);
-
-                soundService.PlaySound(receivedActionRequest,true);
+                MqttMessage receivedActionRequest = JsonSerializer.Deserialize<MqttMessage>(receivedActionRequestJson);
+                Console.WriteLine(receivedActionRequest.Device + " action requested: " + receivedActionRequest.Action);
+                actionRequests.Enqueue(receivedActionRequest);
             }
             catch (Exception exception)
             {
                 Console.WriteLine("This was no valid action request");
             }
         }
+        //Step 1: Process Action request Queue
+        private void ProcessActionRequests()
+        {
+            while (true)
+            {
+                if (actionRequests.Count > 0 && lastRequestFinished)
+                {
+                    Console.WriteLine("now");
+                    lastRequestFinished = false;
+                    currentActionRequest = actionRequests.Dequeue();
+                    soundService.PlaySound(currentActionRequest, true);
+                }
+                else
+                {
+                    Thread.Sleep(1000);
+                }
+
+            }
+        }
+
         //Step 2: User was Asked. Now waiting for response
         private void ActionRequestSoundPlayed(object sender, AudioEventArgs e)
         {
@@ -112,28 +124,28 @@ namespace LocalSpeechRecognitionMaster
                 //Todo remove. just for simulation--------------------------------------
                 if (iterations == 3)
                 {
-                    string content = "{\r\n\t\"text\": \"Yes\"\r\n}";
+                    string content = "{\"text\": \"Ja\"}";
                     File.WriteAllText(jsonService.getFilePath(), content);
                 }
                 //Todo remove. just for simulation--------------------------------------
 
                 if (answer.Length > 0)
                 {
-
+                    Console.WriteLine("Antwort"+answer);
                     if (answer == Answers.Yes)
                     {
-                        executeAction(receivedActionRequest.Device, receivedActionRequest.Action);
+                        executeAction(currentActionRequest.Device, currentActionRequest.Action);
                     }
                     else
                     {
-                        executeAction(receivedActionRequest.Device, Actions.None);
+                        executeAction(currentActionRequest.Device, Actions.None);
                     }
                     break;
                 }
 
                 if (iterations > maxWaitOnResponseIterations)
                 {
-                    executeAction(receivedActionRequest.Device, Actions.None);
+                    executeAction(currentActionRequest.Device, Actions.None);
                     break;
                 }
 
@@ -152,12 +164,12 @@ namespace LocalSpeechRecognitionMaster
         //Step 4. Execute action based on user response
         private void executeAction(string device, string action)
         {
-            string actionAsJson = mqttServiceRx.GenerateActionMessage(device,action);
+            string actionAsJson = mqttServiceRx.GenerateActionMessage(device, action);
             Console.WriteLine("Execute Action: " + action);
             mqttServiceTx.PublishMessage(actionAsJson);
             answer = "";
-            soundService.PlaySound(receivedActionRequest, false);
-
+            soundService.PlaySound(new MqttMessage(device,action), false);
+            lastRequestFinished = true;
         }
 
     }

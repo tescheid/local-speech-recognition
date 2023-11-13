@@ -1,10 +1,12 @@
 from vosk import Model, KaldiRecognizer
 import pyaudio
+import json
 
 isGerman=True
 
 if isGerman:
-    model=Model('vosk-model-small-de-0.15')
+   # model=Model('/home/thgut/Desktop/LSR/Master/Python/vosk-model-small-de-0.15');
+    model=Model('C:/Users/domin/Documents/Dev/PAIND/local-speech-recognition/LocalSpeechRecognition/LocalSpeechRecognitionMaster/bin/Debug/net6.0/Python/vosk-model-small-de-0.15')
 else:
     model=Model('vosk-model-small-en-us-0.15')
 
@@ -20,6 +22,10 @@ while True:
     if len(data) == 0:
         break
     if recognizer.AcceptWaveform(data):
-        print(recognizer.Result())
+        result = recognizer.Result()
+        print(result)
+        with open(file="speechRecognitionOutput.json",mode="w") as fp:
+            json.dump(obj=result,fp=fp,indent=4)
+
 
         

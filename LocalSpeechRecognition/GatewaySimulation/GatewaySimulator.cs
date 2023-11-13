@@ -57,7 +57,7 @@ namespace GatewaySimulation
 
         public void ReceivedMqttMessage(object sender, MqttMsgPublishEventArgs e)
         {
-            Console.WriteLine(Encoding.UTF8.GetString(e.Message));
+            Console.WriteLine("Received: "+Encoding.UTF8.GetString(e.Message));
             for (byte i = 0; i < 6; i++)
             {
                 gpc.Write(ReceivedResponseLedPin, i % 2 == 0 ? 1 : 0);

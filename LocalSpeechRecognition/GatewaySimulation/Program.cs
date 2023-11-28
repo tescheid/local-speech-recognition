@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            GatewaySimulator gateway = new GatewaySimulator();
+            GatewaySimulator gatewaySimulator = new GatewaySimulator();
         }
     }
 }

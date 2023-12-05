@@ -23,7 +23,7 @@ recognizer=KaldiRecognizer(model,frame_rate*2)
 
 if __name__ == '__main__':
 
-	device = 'hw:1,0'
+	device = 'hw:3,0'
 	opts, args = getopt.getopt(sys.argv[1:], 'd:')
 	for o, a in opts:
 		if o == '-d':
@@ -44,7 +44,8 @@ if __name__ == '__main__':
 			result = recognizer.Result()
 			print(result)
 			with open(file="speechRecognitionOutput.json",mode="w") as fp:
-				json.dump(obj=result,fp=fp,indent=4)
+				#json.dump(obj=result,fp=fp,indent=4)
+				fp.write(result)
 
 
         

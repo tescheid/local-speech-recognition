@@ -28,6 +28,7 @@ namespace LocalSpeechRecognitionMaster
         Queue<MqttMessage> actionRequests = new Queue<MqttMessage>();
         MqttMessage currentActionRequest;
         bool lastRequestFinished = true;
+        bool waitingForAnswer = false;
         public MasterService()
         {
             requestMqttBrokerPassword();
@@ -74,7 +75,12 @@ namespace LocalSpeechRecognitionMaster
 
         private void StartSpeechRecognition()
         {
-            //pythonService.RunCmd();
+            pythonService.RunCmd();
+        }
+
+        private void StopSpeechRecognition()
+        {
+            pythonService.RunCmd();
         }
 
 
@@ -107,7 +113,7 @@ namespace LocalSpeechRecognitionMaster
                 }
                 else
                 {
-                    Thread.Sleep(1000);
+                    Thread.Sleep(100);
                 }
 
             }
@@ -120,7 +126,7 @@ namespace LocalSpeechRecognitionMaster
             int iterations = 0;
             while (true)
             {
-
+                /*
                 //Todo remove. just for simulation--------------------------------------
                 if (iterations == 3)
                 {
@@ -128,6 +134,7 @@ namespace LocalSpeechRecognitionMaster
                     File.WriteAllText(jsonService.getFilePath(), content);
                 }
                 //Todo remove. just for simulation--------------------------------------
+                */
 
                 if (answer.Length > 0)
                 {
@@ -140,6 +147,7 @@ namespace LocalSpeechRecognitionMaster
                     {
                         executeAction(currentActionRequest.Device, Actions.None);
                     }
+                    waitingForAnswer = true;
                     break;
                 }
 
@@ -157,8 +165,11 @@ namespace LocalSpeechRecognitionMaster
         //Step 3. Response has been given.
         private void AnswerReceived(object sender, SpeechRecognitionDataModel data)
         {
-            answer = data.text;
-            Console.WriteLine("The User answered: " + answer);
+            if (verifyAnswer(data.text))
+            {
+                answer = data.text;
+                Console.WriteLine("The User answered: " + answer);
+            }
         }
 
         //Step 4. Execute action based on user response
@@ -170,6 +181,16 @@ namespace LocalSpeechRecognitionMaster
             answer = "";
             soundService.PlaySound(new MqttMessage(device,action), false);
             lastRequestFinished = true;
+        }
+
+        private bool verifyAnswer(string answer)
+        {
+            switch (answer)
+            {
+                case Answers.Yes:
+                case Answers.No: return true;
+                default: return false;
+            }
         }
 
     }

@@ -33,8 +33,8 @@ namespace Common
            
             try
             {
-                client = new MqttClient("eee-02013.simple.eee.intern");
-                //client = new MqttClient("192.168.1.110");
+                //client = new MqttClient("eee-02013.simple.eee.intern");
+                client = new MqttClient("192.168.1.110");
                 /* register to message received */
                 client.MqttMsgPublishReceived += client_MqttMsgPublishReceived;
                 //authenticated connection

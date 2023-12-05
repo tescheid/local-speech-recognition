@@ -25,7 +25,6 @@ namespace Common
             {
                 data = LoadJsonFile();
                 lastModified = File.GetLastWriteTime(filePath);
-
                 watcher = new FileSystemWatcher(Path.GetDirectoryName(filePath));
                 watcher.Filter = Path.GetFileName(filePath);
                 watcher.Changed += FileChanged;
@@ -38,13 +37,15 @@ namespace Common
         }
      
 
-        private SpeechRecognitionDataModel LoadJsonFile()
+        public SpeechRecognitionDataModel LoadJsonFile()
         {
             for (int retry = 0; retry < maxRetries; retry++)
             {
                 try
                 {
-                    string json = File.ReadAllText(filePath);
+                    string json = File.ReadAllText(filePath).Replace("\\","");
+
+                    Console.WriteLine(json+"------------------------------------------");
                     return JsonSerializer.Deserialize<SpeechRecognitionDataModel>(json);
                 }
                 catch (IOException)

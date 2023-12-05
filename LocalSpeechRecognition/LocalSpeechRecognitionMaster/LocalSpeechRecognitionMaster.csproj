@@ -19,6 +19,9 @@
     <None Update="Python\speechRecognition-v1.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Python\speechRecognition.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Python\test.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

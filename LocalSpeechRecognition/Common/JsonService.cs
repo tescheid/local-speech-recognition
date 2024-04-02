@@ -15,7 +15,7 @@ namespace Common
         private DateTime lastModified;
         private FileSystemWatcher watcher;
         private int maxRetries = 10;
-        private int retryDelay_ms = 100;
+        private int retryDelayms = 100;
         public event EventHandler<SpeechRecognitionDataModel> fileChangedEvent; //durch das <MyEventArgs> kann man sich das delegate spahren.
 
         public JsonService(string filePath)
@@ -50,7 +50,7 @@ namespace Common
                 }
                 catch (IOException)
                 {
-                    Thread.Sleep(retryDelay_ms);
+                    Thread.Sleep(retryDelayms);
                 }
             }
             return new SpeechRecognitionDataModel();

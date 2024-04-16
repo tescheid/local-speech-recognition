@@ -11,6 +11,7 @@ namespace LocalSpeechRecognitionMaster.Services
     {
         string pythonPath = "python";
         string scriptPath = ""; 
+        private Process pythonProcess;
 
         public PythonService(string scriptPath) {
             this.scriptPath = scriptPath;

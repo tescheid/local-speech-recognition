@@ -38,7 +38,11 @@ namespace LocalSpeechRecognitionMaster
 
                 // Output any errors
                 string errors = process.StandardError.ReadToEnd();
-                if (!string.IsNullOrEmpty(errors))
+                if (errors.StartsWith("Playing WAVE"))
+                {
+                    Console.WriteLine(errors);
+                }
+                else if (!string.IsNullOrEmpty(errors))
                 {
                     Console.WriteLine($"Error: {errors}");
                 }

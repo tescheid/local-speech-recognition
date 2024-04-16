@@ -12,18 +12,27 @@ namespace LocalSpeechRecognitionMaster
         private TerminalService terminalService;
 
         public event EventHandler<AudioEventArgs> audioPlayedEvent; //durch das <MyEventArgs> kann man sich das delegate spahren.
-
+        
         public SoundService() {
         terminalService = new TerminalService();
         }
 
         //request action------------------------------------------------------------
-        public void PlaySound(MqttMessage msg, bool isQuestion)
+        public void PlaySound(MqttMessage msg, bool isQuestion, bool notRecognized)
         {
-            if (msg.Device==Devices.Blinds)
+            if (notRecognized)
+            {
+                PlayAnswerNotRecognized();
+            } 
+            else if (msg.Device == Devices.Blinds && notRecognized==false)
             {
                 switch (msg.Action)
                 {
+                    case Actions.UpDenied:
+
+                        PlayBlindsAreUpDeniedSound();
+                        break;
+                    
                     case Actions.Up:
                         if (isQuestion)
                         {
@@ -31,8 +40,14 @@ namespace LocalSpeechRecognitionMaster
                         }
                         else
                         {
-                            playBlindsAreUpSound();
+                            PlayBlindsAreUpSound();
                         }
+
+                        break;
+                    
+                    case Actions.DownDenied:
+
+                        PlayBlindsAreDownDeniedSound();
                         break;
 
                     case Actions.Down:
@@ -43,9 +58,12 @@ namespace LocalSpeechRecognitionMaster
                         }
                         else
                         {
-                            playBlindsAreDownSound();
+                            PlayBlindsAreDownSound();
                         }
+
                         break;
+                    
+
                     default:
                         break;
                 }
@@ -56,32 +74,45 @@ namespace LocalSpeechRecognitionMaster
         private void PlayRequestBlindsUpSound()
         {
             Console.WriteLine("Playing sound: Blinds up");
-            terminalService.RunCmd("aplay -D hw:3,0 Sounds/blindsUp.wav");
-           // Thread.Sleep(3000);
-            //Todo play sound "Sollen die Storen hochgefahren werden?"
+            terminalService.RunCmd("aplay -D hw:3,0 Sounds/AudioNew/Deutsch/Beschattung-hoch-question.wav");
+            Thread.Sleep(1000);
             audioPlayedEvent?.Invoke(this, new AudioEventArgs(true));
         }
 
         private void PlayRequestBlindsDownSound()
         {
             Console.WriteLine("Playing sound: Blinds down");
-            terminalService.RunCmd("aplay -D hw:3,0 Sounds/blindsDown.wav");
-            //Todo play sound "Sollen die Storen heruntergefahren werden?"
+            terminalService.RunCmd("aplay -D hw:3,0 Sounds/AudioNew/Deutsch/Beschattung-runter-question.wav");
             audioPlayedEvent?.Invoke(this, new AudioEventArgs(true));
         }
 
-        private void playBlindsAreDownSound()
+        private void PlayBlindsAreDownSound()
         {
             Console.WriteLine("Playing sound: Storen sind herunter gefahren");
-            terminalService.RunCmd("aplay -D hw:3,0 Sounds/doingBlindsDown.wav");
-            //Todo play sound "Storen sind herunter gefahren"
+            terminalService.RunCmd("aplay -D hw:3,0 Sounds/AudioNew/Deutsch/Beschattung-runter-bestätigt.wav");
+        }
+        private void PlayBlindsAreDownDeniedSound()
+        {
+            Console.WriteLine("Playing sound: Storen sind herunter gefahren");
+            terminalService.RunCmd("aplay -D hw:3,0 Sounds/AudioNew/Deutsch/Beschattung-runter-abgebrochen.wav");
         }
 
-        private void playBlindsAreUpSound()
+        private void PlayBlindsAreUpSound()
         {
             Console.WriteLine("Playing sound: Storen sind hochgefahren");
-            terminalService.RunCmd("aplay -D hw:3,0 Sounds/doingBlindsUp.wav");
-            //Todo play sound "Storen sind hochgefahren"
+            terminalService.RunCmd("aplay -D hw:3,0 Sounds/AudioNew/Deutsch/Beschattung-hoch-bestätigt.wav");
+        }
+        private void PlayBlindsAreUpDeniedSound()
+        {
+            Console.WriteLine("Playing sound: Storen sind hochgefahren");
+            terminalService.RunCmd("aplay -D hw:3,0 Sounds/AudioNew/Deutsch/Beschattung-hoch-abgebrochen.wav");
+        }
+
+        private void PlayAnswerNotRecognized()
+        {
+            Console.WriteLine("Playing sound: Antwort nicht erkannt");
+            terminalService.RunCmd("aplay -D hw:3,0 Sounds/AudioNew/Deutsch/Antwort-nicht-erkannt.wav");
+            audioPlayedEvent?.Invoke(this, new AudioEventArgs(true));
         }
 
     }

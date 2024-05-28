@@ -1,8 +1,8 @@
-﻿namespace LocalSpeechRecognitionMaster
+﻿namespace LocalSpeechRecognitionMaster.DataModels
 {
     public class AudioEventArgs:EventArgs
     {
-        bool played = false;
+        private readonly bool played = false;
         public AudioEventArgs(bool played) {
             this.played = played;
         } 

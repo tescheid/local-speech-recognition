@@ -52,14 +52,14 @@ def recognize_speech(device):
                 #     print("no length")
                 #     continue
                 if recognizer.AcceptWaveform(data):
-                    result = recognizer.FinalResult()
-                    result_json = json.loads(result)
-                    if 'text' in result_json:
-                        output_dict = {"text": result_json['text']}
-                        print(output_dict)  
-                        with open("speechRecognitionOutput.json", mode="w") as fp:
-                            json.dump(output_dict, fp)
-                            return
+                        result = recognizer.FinalResult()
+                        result_json = json.loads(result)
+                        if 'text' in result_json:
+                            output_dict = {"text": result_json['text']}
+                            print(output_dict)  
+                            with open("speechRecognitionOutput.json", mode="w") as fp:
+                                json.dump(output_dict, fp)
+                                return
     except Exception as e:
         print(f"Error during recognition: {e}")
     finally:
@@ -86,6 +86,7 @@ while True:
                     if data.decode('utf-8') == 'start':
                         print("Start Received")
                         device = 'hw:3,0'
+                        time.sleep(0.7)
                         recognize_speech(device)
         except Exception as e:
             print(f"Error during communication: {e}")

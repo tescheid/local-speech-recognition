@@ -1,197 +1,273 @@
-﻿using Common;
-using Common.DataModels;
-using LocalSpeechRecognitionMaster;
-using LocalSpeechRecognitionMaster.Services;
-using System.Collections;
+﻿using LocalSpeechRecognitionMaster.Services;
+using LocalSpeechRecognitionMaster.DataModels;
 using System.Text;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 using uPLibrary.Networking.M2Mqtt.Messages;
+using NLog;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using System;
+
 
 namespace LocalSpeechRecognitionMaster
 {
-
     public class MasterService
     {
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
+
         private MqttService mqttServiceRx;
         private MqttService mqttServiceTx;
         private JsonService jsonService;
         private SoundService soundService;
         private PythonService pythonService;
+        private AbsenceService absenceService;
+        private DeviceManagementService deviceManagementService;
+        private InitializationService initializationService;
+        private ActionProcessingService actionProcessingService;
 
-        private int maxWaitOnResponseIterations = 50;
-
-        private string answer = "";
+        private readonly int maxRetries = 3;
+        private int retryCount = 0;
 
         private string mqttBrokerUsername = "";
         private string mqttBrokerPassword = "";
 
-        Queue<MqttMessage> actionRequests = new Queue<MqttMessage>();
-        MqttMessage currentActionRequest;
-        bool lastRequestFinished = true;
-        bool waitingForAnswer = false;
+        readonly Queue<MqttMessage> actionRequests = new();
+        private readonly AutoResetEvent newActionEvent = new(false);
+        private readonly object _actionRequestsLock = new();
+
+        // Mapping von deutschen Ordinalzahlen auf numerische Werte
+        private static readonly Dictionary<string, int> OrdinalToNumber = new()
+        {
+            {"ersten", 1}, {"zweiten", 2}, {"dritten", 3}, {"vierten", 4},
+            {"fünften", 5}, {"sechsten", 6}, {"siebten", 7}, {"achten", 8},
+            {"neunten", 9}, {"zehnten", 10}, {"elften", 11}, {"zwölften", 12},
+            {"dreizehnten", 13}, {"vierzehnten", 14}, {"fünfzehnten", 15},
+            {"sechzehnten", 16}, {"siebzehnten", 17}, {"achtzehnten", 18},
+            {"neunzehnten", 19}, {"zwanzigsten", 20}, {"einundzwanzigsten", 21},
+            {"zweiundzwanzigsten", 22}, {"dreiundzwanzigsten", 23}, {"vierundzwanzigsten", 24},
+            {"fünfundzwanzigsten", 25}, {"sechsundzwanzigsten", 26}, {"siebenundzwanzigsten", 27},
+            {"achtundzwanzigsten", 28}, {"neunundzwanzigsten", 29}, {"dreißigsten", 30},
+            {"einunddreissigsten", 31}
+        };
+
         public MasterService()
         {
-            requestMqttBrokerPassword();
-            Init();
+            Logger.Debug("Starting.");
+            RequestMqttBrokerPassword();
         }
-
-        private void requestMqttBrokerPassword()
+        private void RequestMqttBrokerPassword()
         {
-            //todo: uncomment
-            /*
-            Console.Write("Benutzername: ");
-            mqttBrokerUsername = Console.ReadLine();
-            Console.Write("Passwort: ");
-            mqttBrokerPassword = Console.ReadLine();
-            */
-            mqttBrokerUsername = "paindMQTTUser";
-            mqttBrokerPassword = "rp2040";
+            mqttBrokerUsername = "BatMQTTUser";
+            mqttBrokerPassword = "LsR_3123";
         }
-
-
-        private void Init()
+        public void Init()
         {
-            mqttServiceRx = new MqttService(MqttTopics.TopicTx, mqttBrokerUsername, mqttBrokerPassword); //receive from tx of gateway
-            mqttServiceRx.messageReceivedEvent += ActionRequested;
+            Logger.Info("Initializing MasterService...");
 
-            mqttServiceTx = new MqttService(MqttTopics.TopicRx, mqttBrokerUsername, mqttBrokerPassword); //send to rx of gateway
-
-
-            jsonService = new JsonService("./speechRecognitionOutput.json");
-            jsonService.fileChangedEvent += AnswerReceived;
-
+            pythonService = new PythonService("/home/auxilium/netcore/LocalSpeechRecognitionMaster/Python/speechIntent.py");
+            mqttServiceRx = new MqttService(MqttTopics.TopicTx, mqttBrokerUsername, mqttBrokerPassword);
+            mqttServiceTx = new MqttService(MqttTopics.TopicRx, mqttBrokerUsername, mqttBrokerPassword);
+            jsonService = new JsonService("./Python/speechRecognitionOutput.json");
             soundService = new SoundService();
-            soundService.audioPlayedEvent += ActionRequestSoundPlayed;
+            absenceService = new AbsenceService(mqttServiceRx);
+            deviceManagementService = new DeviceManagementService(soundService);
+            actionProcessingService = new ActionProcessingService(actionRequests, newActionEvent, _actionRequestsLock, pythonService, jsonService, soundService, mqttServiceTx, absenceService);
 
-            pythonService = new PythonService("Python/speechRecognition.py");
+            mqttServiceRx.MessageReceivedEvent += MqttActionRequested;
+            jsonService.FileChangedEvent += AnswerReceived;
+            soundService.AudioPlayedEvent += QuestionSoundPlayed;
+            Devices.OnNewActionAdded += deviceManagementService.GenerateSoundsForDeviceAction;
 
-            StartSpeechRecognition();
 
-            Thread t = new Thread(ProcessActionRequests);
-            t.IsBackground = true;
-            t.Start();
+            initializationService = new InitializationService(pythonService, mqttServiceRx, mqttServiceTx, jsonService, soundService, absenceService, deviceManagementService, actionProcessingService);
+            initializationService.Initialize();
 
+            Logger.Info("Application finally started.");
         }
-
-        private void StartSpeechRecognition()
-        {
-            pythonService.RunCmd();
-        }
-
-        private void StopSpeechRecognition()
-        {
-            pythonService.RunCmd();
-        }
-
-
-        //Step 0: Action requested from user or gateway system  
-        private void ActionRequested(object sender, MqttMsgPublishEventArgs e)
+        private void MqttActionRequested(object sender, MqttMsgPublishEventArgs e)
         {
             try
             {
                 string receivedActionRequestJson = Encoding.UTF8.GetString(e.Message);
                 MqttMessage receivedActionRequest = JsonSerializer.Deserialize<MqttMessage>(receivedActionRequestJson);
-                Console.WriteLine(receivedActionRequest.Device + " action requested: " + receivedActionRequest.Action);
-                actionRequests.Enqueue(receivedActionRequest);
+                lock (_actionRequestsLock)
+                {
+                    actionRequests.Enqueue(receivedActionRequest);
+                    Logger.Debug($"Enqueued action request: {receivedActionRequest.Device}, {receivedActionRequest.Action}");
+                }
+                Logger.Info($"{receivedActionRequest.Device} action requested: {receivedActionRequest.Action}");
+                newActionEvent.Set();
+                Logger.Debug($"Event Set");
             }
             catch (Exception exception)
             {
-                Console.WriteLine("This was no valid action request");
+                Logger.Error(exception, $"This was no valid action request.");
             }
         }
-        //Step 1: Process Action request Queue
-        private void ProcessActionRequests()
+        private void HandleAbsenceDuration(SpeechRecognitionDataModel data)
         {
-            while (true)
+            if (data.Slots.TryGetValue("Day", out string day) &&
+                data.Slots.TryGetValue("Month", out string month))
             {
-                if (actionRequests.Count > 0 && lastRequestFinished)
+                try
                 {
-                    Console.WriteLine("now");
-                    lastRequestFinished = false;
-                    currentActionRequest = actionRequests.Dequeue();
-                    soundService.PlaySound(currentActionRequest, true);
+                    DateTime currentDate = DateTime.Now;
+                    DateTime absenceEndDate = new(currentDate.Year, GetMonthFromName(month), ConvertOrdinalToNumber(day));
+                    Logger.Info($"Absence duration calculated: {absenceEndDate}");
+
+                    string absenceMessage = MqttService.GenerateAbsenceMessage("Absenz", "ein", absenceEndDate);
+                    mqttServiceTx.PublishMessage(absenceMessage);
+                    absenceService.AbsenceMode = true;
+                    Logger.Info("Absence end date sent to Home Assistant.");
+                    TerminalService.RunCmdAndReturnOutput($"echo 'Abwesenheit für den {day} {month} bestätigt' |" +
+                        " /home/auxilium/piper/piper/piper -m /home/auxilium/piper/thorsten_voice/de_DE-thorsten-medium.onnx" +
+                        " --output_file temp.wav && aplay temp.wav && rm temp.wav");
+                    actionProcessingService.Reset();
+                    retryCount = 0;
+                }
+                catch (Exception ex)
+                {
+                    Logger.Error(ex, "Fehler beim Berechnen der Abwesenheitsdauer.");
+                    TerminalService.RunCmdAndReturnOutput($"echo 'Bitte um erneute Angabe.' |" +
+                        " /home/auxilium/piper/piper/piper -m /home/auxilium/piper/thorsten_voice/de_DE-thorsten-medium.onnx" +
+                        " --output_file temp.wav && aplay temp.wav && rm temp.wav");
+                    actionProcessingService.Reset();
+                    mqttServiceRx.PublishMessage(MqttService.GenerateActionMessage("Absenz", "ein"));
+                }
+            }
+            else
+            {
+                Logger.Warn("Slot(s) fehlen für die Abwesenheitsdauer.");
+            }
+        }
+        private async void HandleDeviceAction(SpeechRecognitionDataModel data)
+        {
+            if (data.Slots.TryGetValue("Action", out string action))
+            {
+                if (Devices.ActionExistsForDevice(data.Intent, action))
+                {
+                    actionProcessingService.ExecuteAction(data.Intent, action, true);
+                    retryCount = 0;
                 }
                 else
                 {
-                    Thread.Sleep(100);
+                    Logger.Warn($"Aktion {action} für das Gerät {data.Intent} nicht gefunden.");
+                    await pythonService.SendCommand("action");
+                    soundService.PlaySound("action_not_found").Wait();
                 }
-
             }
-        }
-
-        //Step 2: User was Asked. Now waiting for response
-        private void ActionRequestSoundPlayed(object sender, AudioEventArgs e)
-        {
-            Console.WriteLine("Action request Sound Played. Waiting for response...");
-            int iterations = 0;
-            while (true)
+            else
             {
-                /*
-                //Todo remove. just for simulation--------------------------------------
-                if (iterations == 3)
-                {
-                    string content = "{\"text\": \"Ja\"}";
-                    File.WriteAllText(jsonService.getFilePath(), content);
-                }
-                //Todo remove. just for simulation--------------------------------------
-                */
-
-                if (answer.Length > 0)
-                {
-                    Console.WriteLine("Antwort"+answer);
-                    if (answer == Answers.Yes)
-                    {
-                        executeAction(currentActionRequest.Device, currentActionRequest.Action);
-                    }
-                    else
-                    {
-                        executeAction(currentActionRequest.Device, Actions.None);
-                    }
-                    waitingForAnswer = true;
-                    break;
-                }
-
-                if (iterations > maxWaitOnResponseIterations)
-                {
-                    executeAction(currentActionRequest.Device, Actions.None);
-                    break;
-                }
-
-                iterations++;
-                Thread.Sleep(500);
+                Logger.Warn("Slot(s) fehlen für die Aktion.");
+            }
+        }
+        private void HandleModeSelection(SpeechRecognitionDataModel data)
+        {
+            if (data.Intent == "Absence")
+            {
+                actionProcessingService.ProcessAbsenceRequest("Absenz", "ein");
+            }
+            else if (data.Intent == "Action")
+            {
+                actionProcessingService.ProcessDeviceAndAction("Action", "On");
+            }
+        }
+        private async void HandleConfirmation(SpeechRecognitionDataModel data)
+        {
+            if (data.Intent == "Ja")
+            {
+                Logger.Info("Antwort: bestätigt");
+                actionProcessingService.ExecuteAction(actionProcessingService.GetCurrentActionRequest().Device, actionProcessingService.GetCurrentActionRequest().Action, true);
+                retryCount = 0;
+            }
+            else if (data.Intent == "Nein")
+            {
+                Logger.Info("Antwort: abgelehnt");
+                actionProcessingService.ExecuteAction(actionProcessingService.GetCurrentActionRequest().Device, actionProcessingService.GetCurrentActionRequest().Action, false);
+                retryCount = 0;
+            }
+            else if (retryCount > maxRetries)
+            {
+                Logger.Warn("Keine Antwort erkannt.");
+                await soundService.PlaySound("no_answer");
+                actionProcessingService.ExecuteAction(actionProcessingService.GetCurrentActionRequest().Device, actionProcessingService.GetCurrentActionRequest().Action, false);
+            }
+            else
+            {
+                Logger.Warn("Antwort nicht erkannt, bitte wiederholen.");
+                await pythonService.SendCommand("confirmation");
+                await soundService.PlaySound("not_recognized");
+                jsonService.ClearJsonFile();
+                await soundService.PlaySound($"{actionProcessingService.GetCurrentActionRequest().Device}_{actionProcessingService.GetCurrentActionRequest().Action}_question");
             }
         }
 
-        //Step 3. Response has been given.
         private void AnswerReceived(object sender, SpeechRecognitionDataModel data)
         {
-            if (verifyAnswer(data.text))
+            Logger.Info($"Received intent: {data.Intent}");
+
+            try
             {
-                answer = data.text;
-                Console.WriteLine("The User answered: " + answer);
+                if (data.Intent == "Dauer" && data.Slots != null)
+                {
+                    HandleAbsenceDuration(data);
+                }
+                else if (Devices.DeviceExists(data.Intent) && data.Slots != null)
+                {
+                    HandleDeviceAction(data);
+                }
+                else if (data.Intent == "Absence" || data.Intent == "Action")
+                {
+                    HandleModeSelection(data);
+                }
+                else
+                {
+                    HandleConfirmation(data);
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex, "Error processing answer.");
             }
         }
-
-        //Step 4. Execute action based on user response
-        private void executeAction(string device, string action)
+        private async void QuestionSoundPlayed(object sender, AudioEventArgs e)
         {
-            string actionAsJson = mqttServiceRx.GenerateActionMessage(device, action);
-            Console.WriteLine("Execute Action: " + action);
-            mqttServiceTx.PublishMessage(actionAsJson);
-            answer = "";
-            soundService.PlaySound(new MqttMessage(device,action), false);
-            lastRequestFinished = true;
+            await soundService.PlaySound("90s-game-ui");
+            Logger.Info("Sound played. Starting Recognition");
+            Logger.Debug("Sending command: start");
+            await pythonService.SendCommand("start");
+
+            retryCount++;
         }
-
-        private bool verifyAnswer(string answer)
+        private static int GetMonthFromName(string month)
         {
-            switch (answer)
+            var monthNames = new Dictionary<string, int>
             {
-                case Answers.Yes:
-                case Answers.No: return true;
-                default: return false;
-            }
-        }
+                {"Januar", 1}, {"Februar", 2}, {"März", 3}, {"Mu00e4rz",3}, {"April", 4},
+                {"Mai", 5}, {"Juni", 6}, {"Juli", 7}, {"August", 8},
+                {"September", 9}, {"Oktober", 10}, {"November", 11}, {"Dezember", 12}
+            };
 
+            if (monthNames.TryGetValue(month, out int monthNumber))
+            {
+                Logger.Debug($"Month conversion: {month} - {monthNumber}");
+                return monthNumber;
+            }
+
+            Logger.Error($"Invalid month name: {month}");
+            throw new ArgumentException("Ungültiger Monatsname.");
+        }
+        private static int ConvertOrdinalToNumber(string ordinal)
+        {
+            if (OrdinalToNumber.TryGetValue(ordinal.ToLower(), out int number))
+            {
+                Logger.Debug($"Ordinal to number conversion: {ordinal} - {number}");
+                return number;
+            }
+
+            Logger.Error($"Unknown ordinal: {ordinal}");
+            throw new ArgumentException($"Unbekannte Ordinalzahl: {ordinal}");
+        }
     }
 }

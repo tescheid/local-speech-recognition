@@ -10,6 +10,5 @@ namespace Common.DataModels
     {
         public const string TopicTx = "LocalSpeechRecognitionTx";
         public const string TopicRx = "LocalSpeechRecognitionRx";
-
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace LocalSpeechRecognitionMaster
+﻿namespace LocalSpeechRecognitionMaster.DataModels
 {
     public class Senders
     {

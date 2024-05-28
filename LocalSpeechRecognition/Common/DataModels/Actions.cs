@@ -1,10 +1,18 @@
 ﻿namespace Common
 {
-    public class Actions
+    public static class Actions
     {
-        public const string Up = "up";
-        public const string Down = "down";
-        public const string None = "none";
+        private readonly static HashSet<string> actions = new();
 
+        //Add action
+        public static void AddAction(string action)
+        {
+            actions.Add(action);
+        }
+
+        public static bool ActionExists(string action)
+        {
+            return actions.Contains(action);
+        }
     }
 }

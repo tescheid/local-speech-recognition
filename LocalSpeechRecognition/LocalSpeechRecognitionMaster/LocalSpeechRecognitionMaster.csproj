@@ -1,14 +1,33 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="M2Mqtt" Version="4.3.0" />
+    <Compile Remove="Python\vosk-model-small-de-0.15\**" />
+    <Compile Remove="Python\vosk-model-small-en-us-0.15\**" />
+    <Compile Remove="Sounds\**" />
+    <EmbeddedResource Remove="Python\vosk-model-small-de-0.15\**" />
+    <EmbeddedResource Remove="Python\vosk-model-small-en-us-0.15\**" />
+    <EmbeddedResource Remove="Sounds\**" />
+    <None Remove="Python\vosk-model-small-de-0.15\**" />
+    <None Remove="Python\vosk-model-small-en-us-0.15\**" />
+    <None Remove="Sounds\**" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="M2MqttDotnetCore" Version="1.1.0" />
+    <PackageReference Include="NLog" Version="5.3.2" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="5.3.11" />
+    <PackageReference Include="pythonnet" Version="3.0.3" />
+    <PackageReference Include="SSH.NET" Version="2024.0.0" />
+    <PackageReference Include="System.Device.Gpio" Version="3.1.0" />
+    <PackageReference Include="System.Speech" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,15 +35,33 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Python\speechRecognition-v1.py">
+    <None Update="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Python\speechIntent.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Python\speechRecognition.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Python\test.py">
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="cd &quot;$(TargetDir)&quot;&#xD;&#xA;&quot;$(SolutionDir)\SecureUpload.exe&quot; . batpi-2:netcore/$(ProjectName)" />
+  </Target>
+
+  <ItemGroup>
+    <None Remove="C:\Users\hansc\.nuget\packages\vosk\0.3.38\build\lib\win-x64\libvosk.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\hansc\.nuget\packages\vosk\0.3.38\build\lib\win-x64\libvosk.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="DataModels\SpeechRecognitionDataModel.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Compile>
   </ItemGroup>
 
 </Project>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LocalSpeechRecognitionMaster")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+992e987a2b30d8ae58fecd2b23584e8028596aef")]
 [assembly: System.Reflection.AssemblyProductAttribute("LocalSpeechRecognitionMaster")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LocalSpeechRecognitionMaster")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

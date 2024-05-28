@@ -2,9 +2,9 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            GatewaySimulator gatewaySimulator = new GatewaySimulator();
+            _ = new GatewaySimulator();
         }
     }
 }

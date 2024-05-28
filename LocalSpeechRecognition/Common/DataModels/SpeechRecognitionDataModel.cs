@@ -1,8 +1,15 @@
-﻿
+﻿using System.Text.Json.Serialization;
+
+
 namespace Common
 {
     public class SpeechRecognitionDataModel
     {
-        public string text { get; set; }
+        [JsonPropertyName("intent")]
+        public string Intent { get; set; }
+
+        [JsonPropertyName("slots")]
+        public Dictionary<string, string> Slots { get; set; }
     }
 }
+

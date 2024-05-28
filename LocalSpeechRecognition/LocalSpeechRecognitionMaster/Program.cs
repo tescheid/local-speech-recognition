@@ -4,9 +4,10 @@ namespace LocalSpeechRecognitionMaster
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            MasterService service = new MasterService();
+            MasterService service = new();
+            service.Init();
         }
     }
 }

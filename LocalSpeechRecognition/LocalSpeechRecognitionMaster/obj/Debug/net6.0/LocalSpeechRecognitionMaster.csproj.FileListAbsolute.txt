@@ -27,9 +27,6 @@ C:\Users\domin\Documents\Dev\PAIND\local-speech-recognition\LocalSpeechRecogniti
 C:\Users\domin\Documents\Dev\PAIND\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\Sounds\blindsUp.wav
 C:\Users\domin\Documents\Dev\PAIND\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\Sounds\doingBlindsDown.wav
 C:\Users\domin\Documents\Dev\PAIND\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\Sounds\doingBlindsUp.wav
-C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\Common.deps.json
-C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\Common.runtimeconfig.json
-C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\Common.exe
 C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\NLog.config
 C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\LocalSpeechRecognitionMaster.exe
 C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\DataModels\SpeechRecognitionDataModel.cs
@@ -54,8 +51,6 @@ C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMas
 C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\System.Device.Gpio.dll
 C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\System.Speech.dll
 C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Speech.dll
-C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\Common.dll
-C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\Common.pdb
 C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\obj\Debug\net6.0\LocalSpeechRecognitionMaster.csproj.AssemblyReference.cache
 C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\obj\Debug\net6.0\LocalSpeechRecognitionMaster.GeneratedMSBuildEditorConfig.editorconfig
 C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\obj\Debug\net6.0\LocalSpeechRecognitionMaster.AssemblyInfoInputs.cache
@@ -68,3 +63,13 @@ C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMas
 C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\obj\Debug\net6.0\LocalSpeechRecognitionMaster.pdb
 C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\obj\Debug\net6.0\LocalSpeechRecognitionMaster.genruntimeconfig.cache
 C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\obj\Debug\net6.0\ref\LocalSpeechRecognitionMaster.dll
+C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\LSR_Settings.json
+C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Json.dll
+C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\System.Text.Json.dll
+C:\BAT\local-speech-recognition\LocalSpeechRecognition\LocalSpeechRecognitionMaster\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll

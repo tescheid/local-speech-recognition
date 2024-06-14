@@ -33,9 +33,6 @@ def callback(indata, frames, time, status):
 # Funktion zur Spracherkennung
 def recognize_speech(device):
     try:  
-        #inp = alsaaudio.PCM(alsaaudio.PCM_CAPTURE, alsaaudio.PCM_NONBLOCK, 
-        #                    channels=1, rate=frame_rate, format=alsaaudio.PCM_FORMAT_S16_LE, 
-        #                   periodsize=4096, device=device)
         with sd.RawInputStream(samplerate=frame_rate, blocksize=8000, device=device,
                            dtype='int16', channels=1, callback=callback):
             recognizer = KaldiRecognizer(model, frame_rate)

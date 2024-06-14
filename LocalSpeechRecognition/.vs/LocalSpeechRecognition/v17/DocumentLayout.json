@@ -3,40 +3,16 @@
   "WorkspaceRootPath": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\services\\terminalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\services\\terminalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\services\\masterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\services\\masterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\datamodels\\audioeventargs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\datamodels\\audioeventargs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\services\\jsonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\services\\jsonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\services\\mqttservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\services\\mqttservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\services\\soundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\services\\soundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\services\\pythonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\services\\pythonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\services\\devicemanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\services\\devicemanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\services\\actionprocessingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\services\\actionprocessingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\services\\absenceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\services\\absenceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\python\\speechintent.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\python\\speechintent.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\datamodels\\speechrecognitiondatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,10 +23,6 @@
       "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\datamodels\\senders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\datamodels\\mqtttopics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\datamodels\\mqtttopics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\datamodels\\mqttmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\datamodels\\mqttmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -59,40 +31,36 @@
       "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\datamodels\\devices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\datamodels\\audioeventargs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\datamodels\\audioeventargs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\datamodels\\actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\datamodels\\actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C5059236-EE7C-4208-ABC8-6ACAF4AC2A5B}|Common\\Common.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\common\\datamodels\\speechrecognitiondatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5059236-EE7C-4208-ABC8-6ACAF4AC2A5B}|Common\\Common.csproj|solutionrelative:common\\datamodels\\speechrecognitiondatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\python\\speechrecognition.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\python\\speechrecognition.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C5059236-EE7C-4208-ABC8-6ACAF4AC2A5B}|Common\\Common.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\common\\datamodels\\actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5059236-EE7C-4208-ABC8-6ACAF4AC2A5B}|Common\\Common.csproj|solutionrelative:common\\datamodels\\actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\services\\absenceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\services\\absenceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C5059236-EE7C-4208-ABC8-6ACAF4AC2A5B}|Common\\Common.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\common\\datamodels\\mqtttopics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5059236-EE7C-4208-ABC8-6ACAF4AC2A5B}|Common\\Common.csproj|solutionrelative:common\\datamodels\\mqtttopics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\lsr_settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\lsr_settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C5059236-EE7C-4208-ABC8-6ACAF4AC2A5B}|Common\\Common.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\common\\datamodels\\mqttmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5059236-EE7C-4208-ABC8-6ACAF4AC2A5B}|Common\\Common.csproj|solutionrelative:common\\datamodels\\mqttmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\services\\actionprocessingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\services\\actionprocessingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C5059236-EE7C-4208-ABC8-6ACAF4AC2A5B}|Common\\Common.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\common\\datamodels\\devices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5059236-EE7C-4208-ABC8-6ACAF4AC2A5B}|Common\\Common.csproj|solutionrelative:common\\datamodels\\devices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\services\\soundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\services\\soundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\services\\initializationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\services\\initializationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5059236-EE7C-4208-ABC8-6ACAF4AC2A5B}|Common\\Common.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\common\\jsonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5059236-EE7C-4208-ABC8-6ACAF4AC2A5B}|Common\\Common.csproj|solutionrelative:common\\jsonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5059236-EE7C-4208-ABC8-6ACAF4AC2A5B}|Common\\Common.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\common\\mqttservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5059236-EE7C-4208-ABC8-6ACAF4AC2A5B}|Common\\Common.csproj|solutionrelative:common\\mqttservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|c:\\bat\\local-speech-recognition\\localspeechrecognition\\localspeechrecognitionmaster\\nlog.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{D9CBC7DC-BE8B-43DC-8704-87A94D721581}|LocalSpeechRecognitionMaster\\LocalSpeechRecognitionMaster.csproj|solutionrelative:localspeechrecognitionmaster\\nlog.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -102,8 +70,61 @@
       "DocumentGroups": [
         {
           "DockedWidth": 227,
-          "SelectedChildIndex": 24,
+          "SelectedChildIndex": 11,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MasterService.cs",
+              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\MasterService.cs",
+              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\Services\\MasterService.cs",
+              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\MasterService.cs",
+              "RelativeToolTip": "LocalSpeechRecognitionMaster\\Services\\MasterService.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAADcAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T05:42:39.003Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SpeechRecognitionDataModel.cs",
+              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\SpeechRecognitionDataModel.cs",
+              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\DataModels\\SpeechRecognitionDataModel.cs",
+              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\SpeechRecognitionDataModel.cs",
+              "RelativeToolTip": "LocalSpeechRecognitionMaster\\DataModels\\SpeechRecognitionDataModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T08:53:28.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Senders.cs",
+              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\Senders.cs",
+              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\DataModels\\Senders.cs",
+              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\Senders.cs",
+              "RelativeToolTip": "LocalSpeechRecognitionMaster\\DataModels\\Senders.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAABYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T08:53:22.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Actions.cs",
+              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\Actions.cs",
+              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\DataModels\\Actions.cs",
+              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\Actions.cs",
+              "RelativeToolTip": "LocalSpeechRecognitionMaster\\DataModels\\Actions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T08:51:55.614Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -122,280 +143,142 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MqttService.cs",
-              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\MqttService.cs",
-              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\Services\\MqttService.cs",
-              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\MqttService.cs",
-              "RelativeToolTip": "LocalSpeechRecognitionMaster\\Services\\MqttService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:45:34.061Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SoundService.cs",
-              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\SoundService.cs",
-              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\Services\\SoundService.cs",
-              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\SoundService.cs",
-              "RelativeToolTip": "LocalSpeechRecognitionMaster\\Services\\SoundService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:44:14.388Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ActionProcessingService.cs",
-              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\ActionProcessingService.cs",
-              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\Services\\ActionProcessingService.cs",
-              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\ActionProcessingService.cs",
-              "RelativeToolTip": "LocalSpeechRecognitionMaster\\Services\\ActionProcessingService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:44:09.467Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Senders.cs",
-              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\Senders.cs",
-              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\DataModels\\Senders.cs",
-              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\Senders.cs",
-              "RelativeToolTip": "LocalSpeechRecognitionMaster\\DataModels\\Senders.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:43:06.115Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MqttTopics.cs",
-              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\MqttTopics.cs",
-              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\DataModels\\MqttTopics.cs",
-              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\MqttTopics.cs",
-              "RelativeToolTip": "LocalSpeechRecognitionMaster\\DataModels\\MqttTopics.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:42:59.34Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MqttMessage.cs",
-              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\MqttMessage.cs",
-              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\DataModels\\MqttMessage.cs",
-              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\MqttMessage.cs",
-              "RelativeToolTip": "LocalSpeechRecognitionMaster\\DataModels\\MqttMessage.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:42:48.921Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AudioEventArgs.cs",
-              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\AudioEventArgs.cs",
-              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\DataModels\\AudioEventArgs.cs",
-              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\AudioEventArgs.cs",
-              "RelativeToolTip": "LocalSpeechRecognitionMaster\\DataModels\\AudioEventArgs.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:41:39.084Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 6,
               "Title": "Devices.cs",
               "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\Devices.cs",
               "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\DataModels\\Devices.cs",
               "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\Devices.cs",
               "RelativeToolTip": "LocalSpeechRecognitionMaster\\DataModels\\Devices.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAxAAAA",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAYwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:41:38.203Z"
+              "WhenOpened": "2024-06-07T05:16:09.504Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Actions.cs",
-              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\Actions.cs",
-              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\DataModels\\Actions.cs",
-              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\Actions.cs",
-              "RelativeToolTip": "LocalSpeechRecognitionMaster\\DataModels\\Actions.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:41:18.196Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DeviceManagementService.cs",
-              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\DeviceManagementService.cs",
-              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\Services\\DeviceManagementService.cs",
-              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\DeviceManagementService.cs",
-              "RelativeToolTip": "LocalSpeechRecognitionMaster\\Services\\DeviceManagementService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:40:22.763Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "InitializationService.cs",
-              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\InitializationService.cs",
-              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\Services\\InitializationService.cs",
-              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\InitializationService.cs",
-              "RelativeToolTip": "LocalSpeechRecognitionMaster\\Services\\InitializationService.cs",
+              "DocumentIndex": 7,
+              "Title": "AudioEventArgs.cs",
+              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\AudioEventArgs.cs",
+              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\DataModels\\AudioEventArgs.cs",
+              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\AudioEventArgs.cs",
+              "RelativeToolTip": "LocalSpeechRecognitionMaster\\DataModels\\AudioEventArgs.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:40:21.521Z"
+              "WhenOpened": "2024-06-07T05:16:06.509Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
+              "Title": "speechIntent.py",
+              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Python\\speechIntent.py",
+              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\Python\\speechIntent.py",
+              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Python\\speechIntent.py",
+              "RelativeToolTip": "LocalSpeechRecognitionMaster\\Python\\speechIntent.py",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAG4AAAAgAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMuSURBVDhPrVTPTxNREP627e7SQm0F2mKLUEVICP5IMBqUhB6NJ4/GGGPwoIf\u002BCR7VxBBPhnAxAeVC4kEuJB6Qi0Y8oCGKpoKQUpEWAhX6c7vb3X1Ol5UauzEc/JLJm31v3pdv5u0M/isYY5zpGohEIs8GBgZu8Dxv7tQik8mwbDb7YGpq6lEqlcqa2/twmOs\u002BBgcHEQgEzK9azMzMsHg8fsdut7Pp6enHKysrafPIQA1hBRRkelUQAcLhMEi9jTLxdnZ23pZl2elwOIYWFxe3zTBrwmAwaHpVcFy1OoIg8P39/c1Efo3KJquq\u002BpBEFCpnNiPiL9CFGvtd14rSyclJDA8P22dnZ1tcLlevKIp\u002B45BgqXBpacn0qqDUQGniXN9F9J6/AIeNg1TIyaOjo9/NEAOWhN3d3aZXRV5W8Sq2jY2sBElSwFNuR9x2x5HWtkabrZrogRXKDUEsb\u002BSxmSlg7tsG1LICX4PAX\u002Blpbff7/Q1mmHUNK6/5t2WKKt4uphBbS0NXy2QasvkiV1RtTrfb7TKvWhNWoGkaNHD4ulXGxNwmPibSOH3Ui95wI5rqeahESq8Ln7dwavLpjXe69HlB1/U2y5RXV1eNdb3E48VCDuvpHF1WoJWJhEyjdHWNVNKvJHBbgDQPlOZ74Ls7ZKmwq6vLsCKrw\u002BZu3lCjl1UquA6P0wGPi4eX7EzYhdNB6j5NoiL/AJS1S5YKY7GYsa6tS5BlUkOptTU6EI1IcNp3aQboNAh0eIUdhJybgFrcI9V2Pf9U2B4KQKCIisLbEQFnWz6gx7eMk/4VnGyOobU\u002BDk79SQF5IqNG4YM7loSKohjWfljE8WYn3KIdvkM6OKYBukIEMq2kkj7BiIJRF9Wd0iCEnlimnEwmjVUkuxU5jgzdD3jooUpEppWosT1kTlJE/S127UA89gV1J76Nj48PWRJ2dHSY3h4qg0HUkwz5AmcQajRc6vtIGRHam9aev1y/9/r1xNuRkZFiDeHY2Nj\u002BIPgTN69fThwVQ2Eon4iQHiD3HqzhPNOcvek3b\u002B7HK2Rm6MFAY\u002BoQ08uPWCmRYvl5ncnJBO29JLsajUbDe1HAL6CnYE1YMsFsAAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-06-02T13:10:53.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TerminalService.cs",
+              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\TerminalService.cs",
+              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\Services\\TerminalService.cs",
+              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\TerminalService.cs",
+              "RelativeToolTip": "LocalSpeechRecognitionMaster\\Services\\TerminalService.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAA1wG4AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T05:00:09.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "AbsenceService.cs",
               "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\AbsenceService.cs",
               "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\Services\\AbsenceService.cs",
               "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\AbsenceService.cs",
               "RelativeToolTip": "LocalSpeechRecognitionMaster\\Services\\AbsenceService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAzwMkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:40:13.719Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SpeechRecognitionDataModel.cs",
-              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\SpeechRecognitionDataModel.cs",
-              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\DataModels\\SpeechRecognitionDataModel.cs",
-              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\SpeechRecognitionDataModel.cs",
-              "RelativeToolTip": "LocalSpeechRecognitionMaster\\DataModels\\SpeechRecognitionDataModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:40:08.89Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "JsonService.cs",
-              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\JsonService.cs",
-              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\Services\\JsonService.cs",
-              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\JsonService.cs",
-              "RelativeToolTip": "LocalSpeechRecognitionMaster\\Services\\JsonService.cs",
-              "ViewState": "AQIAAG8AAAAAAAAAAAAowAkAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:39:45.651Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Actions.cs",
-              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\Common\\DataModels\\Actions.cs",
-              "RelativeDocumentMoniker": "Common\\DataModels\\Actions.cs",
-              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\Common\\DataModels\\Actions.cs",
-              "RelativeToolTip": "Common\\DataModels\\Actions.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:38:30.265Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Devices.cs",
-              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\Common\\DataModels\\Devices.cs",
-              "RelativeDocumentMoniker": "Common\\DataModels\\Devices.cs",
-              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\Common\\DataModels\\Devices.cs",
-              "RelativeToolTip": "Common\\DataModels\\Devices.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:38:26.774Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "MqttMessage.cs",
-              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\Common\\DataModels\\MqttMessage.cs",
-              "RelativeDocumentMoniker": "Common\\DataModels\\MqttMessage.cs",
-              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\Common\\DataModels\\MqttMessage.cs",
-              "RelativeToolTip": "Common\\DataModels\\MqttMessage.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:38:25.115Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "MqttTopics.cs",
-              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\Common\\DataModels\\MqttTopics.cs",
-              "RelativeDocumentMoniker": "Common\\DataModels\\MqttTopics.cs",
-              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\Common\\DataModels\\MqttTopics.cs",
-              "RelativeToolTip": "Common\\DataModels\\MqttTopics.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:38:24.042Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "SpeechRecognitionDataModel.cs",
-              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\Common\\DataModels\\SpeechRecognitionDataModel.cs",
-              "RelativeDocumentMoniker": "Common\\DataModels\\SpeechRecognitionDataModel.cs",
-              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\Common\\DataModels\\SpeechRecognitionDataModel.cs",
-              "RelativeToolTip": "Common\\DataModels\\SpeechRecognitionDataModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:38:21.605Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "MqttService.cs",
-              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\Common\\MqttService.cs",
-              "RelativeDocumentMoniker": "Common\\MqttService.cs",
-              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\Common\\MqttService.cs",
-              "RelativeToolTip": "Common\\MqttService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:37:58.861Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MasterService.cs",
-              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\MasterService.cs",
-              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\Services\\MasterService.cs",
-              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\MasterService.cs",
-              "RelativeToolTip": "LocalSpeechRecognitionMaster\\Services\\MasterService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:29:00.951Z",
+              "WhenOpened": "2024-06-07T06:06:31.552Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PythonService.cs",
-              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\PythonService.cs",
-              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\Services\\PythonService.cs",
-              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\PythonService.cs",
-              "RelativeToolTip": "LocalSpeechRecognitionMaster\\Services\\PythonService.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAD4vywAAAAqAAAA",
+              "DocumentIndex": 13,
+              "Title": "SoundService.cs",
+              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\SoundService.cs",
+              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\Services\\SoundService.cs",
+              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\SoundService.cs",
+              "RelativeToolTip": "LocalSpeechRecognitionMaster\\Services\\SoundService.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACQAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:26:58.495Z"
+              "WhenOpened": "2024-06-07T04:25:31.993Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "JsonService.cs",
-              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\Common\\JsonService.cs",
-              "RelativeDocumentMoniker": "Common\\JsonService.cs",
-              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\Common\\JsonService.cs",
-              "RelativeToolTip": "Common\\JsonService.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAQwDQAAAAAAAAA",
+              "DocumentIndex": 11,
+              "Title": "LSR_Settings.json",
+              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\LSR_Settings.json",
+              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\LSR_Settings.json",
+              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\LSR_Settings.json",
+              "RelativeToolTip": "LocalSpeechRecognitionMaster\\LSR_Settings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-07T02:47:05.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MqttMessage.cs",
+              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\MqttMessage.cs",
+              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\DataModels\\MqttMessage.cs",
+              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\DataModels\\MqttMessage.cs",
+              "RelativeToolTip": "LocalSpeechRecognitionMaster\\DataModels\\MqttMessage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T01:25:16.777Z"
+              "WhenOpened": "2024-06-07T05:16:10.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "speechRecognition.py",
+              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Python\\speechRecognition.py",
+              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\Python\\speechRecognition.py",
+              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Python\\speechRecognition.py",
+              "RelativeToolTip": "LocalSpeechRecognitionMaster\\Python\\speechRecognition.py",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAAzAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMuSURBVDhPrVTPTxNREP627e7SQm0F2mKLUEVICP5IMBqUhB6NJ4/GGGPwoIf\u002BCR7VxBBPhnAxAeVC4kEuJB6Qi0Y8oCGKpoKQUpEWAhX6c7vb3X1Ol5UauzEc/JLJm31v3pdv5u0M/isYY5zpGohEIs8GBgZu8Dxv7tQik8mwbDb7YGpq6lEqlcqa2/twmOs\u002BBgcHEQgEzK9azMzMsHg8fsdut7Pp6enHKysrafPIQA1hBRRkelUQAcLhMEi9jTLxdnZ23pZl2elwOIYWFxe3zTBrwmAwaHpVcFy1OoIg8P39/c1Efo3KJquq\u002BpBEFCpnNiPiL9CFGvtd14rSyclJDA8P22dnZ1tcLlevKIp\u002B45BgqXBpacn0qqDUQGniXN9F9J6/AIeNg1TIyaOjo9/NEAOWhN3d3aZXRV5W8Sq2jY2sBElSwFNuR9x2x5HWtkabrZrogRXKDUEsb\u002BSxmSlg7tsG1LICX4PAX\u002Blpbff7/Q1mmHUNK6/5t2WKKt4uphBbS0NXy2QasvkiV1RtTrfb7TKvWhNWoGkaNHD4ulXGxNwmPibSOH3Ui95wI5rqeahESq8Ln7dwavLpjXe69HlB1/U2y5RXV1eNdb3E48VCDuvpHF1WoJWJhEyjdHWNVNKvJHBbgDQPlOZ74Ls7ZKmwq6vLsCKrw\u002BZu3lCjl1UquA6P0wGPi4eX7EzYhdNB6j5NoiL/AJS1S5YKY7GYsa6tS5BlUkOptTU6EI1IcNp3aQboNAh0eIUdhJybgFrcI9V2Pf9U2B4KQKCIisLbEQFnWz6gx7eMk/4VnGyOobU\u002BDk79SQF5IqNG4YM7loSKohjWfljE8WYn3KIdvkM6OKYBukIEMq2kkj7BiIJRF9Wd0iCEnlimnEwmjVUkuxU5jgzdD3jooUpEppWosT1kTlJE/S127UA89gV1J76Nj48PWRJ2dHSY3h4qg0HUkwz5AmcQajRc6vtIGRHam9aev1y/9/r1xNuRkZFiDeHY2Nj\u002BIPgTN69fThwVQ2Eon4iQHiD3HqzhPNOcvek3b\u002B7HK2Rm6MFAY\u002BoQ08uPWCmRYvl5ncnJBO29JLsajUbDe1HAL6CnYE1YMsFsAAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-06-03T18:05:44.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ActionProcessingService.cs",
+              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\ActionProcessingService.cs",
+              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\Services\\ActionProcessingService.cs",
+              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\Services\\ActionProcessingService.cs",
+              "RelativeToolTip": "LocalSpeechRecognitionMaster\\Services\\ActionProcessingService.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAQwG4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T00:17:18.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "NLog.config",
+              "DocumentMoniker": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\NLog.config",
+              "RelativeDocumentMoniker": "LocalSpeechRecognitionMaster\\NLog.config",
+              "ToolTip": "C:\\BAT\\local-speech-recognition\\LocalSpeechRecognition\\LocalSpeechRecognitionMaster\\NLog.config",
+              "RelativeToolTip": "LocalSpeechRecognitionMaster\\NLog.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-06-03T00:20:07.752Z"
             }
           ]
         }

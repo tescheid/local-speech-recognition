@@ -10,18 +10,16 @@
   <ItemGroup>
     <Compile Remove="Python\vosk-model-small-de-0.15\**" />
     <Compile Remove="Python\vosk-model-small-en-us-0.15\**" />
-    <Compile Remove="Sounds\**" />
     <EmbeddedResource Remove="Python\vosk-model-small-de-0.15\**" />
     <EmbeddedResource Remove="Python\vosk-model-small-en-us-0.15\**" />
-    <EmbeddedResource Remove="Sounds\**" />
     <None Remove="Python\vosk-model-small-de-0.15\**" />
     <None Remove="Python\vosk-model-small-en-us-0.15\**" />
-    <None Remove="Sounds\**" />
   </ItemGroup>
 
 
   <ItemGroup>
     <PackageReference Include="M2MqttDotnetCore" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
     <PackageReference Include="NLog" Version="5.3.2" />
     <PackageReference Include="NLog.Extensions.Logging" Version="5.3.11" />
     <PackageReference Include="pythonnet" Version="3.0.3" />
@@ -31,12 +29,23 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <None Update="LSR_Settings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Python\rhino_model\Absenz_de_raspberry-pi_v3_0_0.rhn">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Python\rhino_model\Actions_de_raspberry-pi_v3_0_0.rhn">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Python\rhino_model\BAT_de_raspberry-pi_v3_0_0.rhn">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Python\rhino_model\ModeSelection_de_raspberry-pi_v3_0_0.rhn">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Python\speechIntent.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -56,6 +65,19 @@
 
   <ItemGroup>
     <None Remove="C:\Users\hansc\.nuget\packages\vosk\0.3.38\build\lib\win-x64\libvosk.dll" />
+    <None Remove="Sounds\success.mp3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Include="Sounds\success.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </ApplicationDefinition>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Sounds\success.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>

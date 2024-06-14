@@ -1,0 +1,28 @@
+{
+  "Paths": {
+    "SoundPath": "./Sounds/",
+    "ModelPath": "/home/auxilium/piper/thorsten_voice/de_DE-thorsten-medium.onnx",
+    "PiperPath": "/home/auxilium/piper/piper/piper",
+    "IntentPath": "./Python/speechIntent.py",
+    "IntentOutputPath": "./Python/speechRecognitionOutput.json",
+    "PythonPath": "python"
+  },
+  "Credentials": {
+    "mqttBrokerUsername": "BatMQTTUser",
+    "mqttBrokerPassword": "LsR_3123"
+  },
+  "MasterConfig": {
+    "maxRetries": 3
+  },
+  "ButtonPins": {
+    "absencePin": 27,
+    "modePin": 17
+  },
+  "Topics": {
+    "TopicRx": "LocalSpeechRecognitionRx",
+    "TopicTx": "LocalSpeechRecognitionTx"
+  },
+  "TCP": {
+    "Port": 40000
+  }
+}

@@ -8,15 +8,26 @@ using System.Threading.Tasks;
 
 namespace LocalSpeechRecognitionMaster
 {
+    /// <summary>
+    /// TerminalService used to execute terminal commands.
+    /// </summary>
     public class TerminalService
     {
+        // Logger instane
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
-
+        
+        /// <summary>
+        /// Initialize new instance of TerminalService.
+        /// </summary>
         public TerminalService() 
         {
             Logger.Info("TerminalService initialized.");
-        }    
+        }
 
+        /// <summary>
+        /// Execute command without returning output.
+        /// </summary>
+        /// <param name="cmd">Command to execute.</param>
         public static void RunCmd(string cmd)
         {
             Logger.Debug($"Running command: {cmd}");
@@ -55,6 +66,12 @@ namespace LocalSpeechRecognitionMaster
                 Logger.Error($"Exception while running command: {ex.Message}");
             }
         }
+
+        /// <summary>
+        /// Execute terminal command and return output.
+        /// </summary>
+        /// <param name="cmd">Command to execute.</param>
+        /// <returns>Output of command.</returns>
         public static string RunCmdAndReturnOutput(string cmd)
         {
             Logger.Debug($"Running command and returning output: {cmd}");
